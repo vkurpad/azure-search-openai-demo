@@ -114,6 +114,8 @@ Once in the web app:
 * [Revolutionize your Enterprise Data with ChatGPT: Next-gen Apps w/ Azure OpenAI and Cognitive Search](https://aka.ms/entgptsearchblog)
 * [Azure Cognitive Search](https://learn.microsoft.com/azure/search/search-what-is-azure-search)
 * [Azure OpenAI Service](https://learn.microsoft.com/azure/cognitive-services/openai/overview)
+* [Azure AI Document Intelligence](https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/?view=form-recog-3.0.0)
+
 
 ### Note
 
@@ -124,6 +126,10 @@ Once in the web app:
 ***Question***: Why do we need to break up the PDFs into chunks when Azure Cognitive Search supports searching large documents?
 
 ***Answer***: Chunking allows us to limit the amount of information we send to OpenAI due to token limits. By breaking up the content, it allows us to easily find potential chunks of text that we can inject into OpenAI. The method of chunking we use leverages a sliding window of text such that sentences that end one chunk will start the next. This allows us to reduce the chance of losing the context of the text.
+
+***Question***: How do I get document contents that includes images and tables to provide more accurate and complete results?
+
+***Answer***: Azure AI Document Intelligence service provides document extraction capabilities that include extracting text from documents in reading order, text extraction from images and table detection and extraction. Adding Document Intellience to your deployment template will add these enterprise grade features to your solution.
 
 ### Troubleshooting
 
